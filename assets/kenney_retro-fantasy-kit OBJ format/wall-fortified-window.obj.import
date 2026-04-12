@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://lb4olgp3nxwg"
+path="res://.godot/imported/wall-fortified-window.obj-13dd0bb21230fda3c4a9f95a591a474c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall-fortified-window.obj-13dd0bb21230fda3c4a9f95a591a474c.mesh"]
+
+source_file="res://assets/kenney_retro-fantasy-kit OBJ format/wall-fortified-window.obj"
+dest_files=["res://.godot/imported/wall-fortified-window.obj-13dd0bb21230fda3c4a9f95a591a474c.mesh", "res://.godot/imported/wall-fortified-window.obj-13dd0bb21230fda3c4a9f95a591a474c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

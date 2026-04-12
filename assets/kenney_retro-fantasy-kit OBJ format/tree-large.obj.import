@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://5wlkrxuve8v1"
+path="res://.godot/imported/tree-large.obj-02b601cbabf3ae0b9e37d91342d334eb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tree-large.obj-02b601cbabf3ae0b9e37d91342d334eb.mesh"]
+
+source_file="res://assets/kenney_retro-fantasy-kit OBJ format/tree-large.obj"
+dest_files=["res://.godot/imported/tree-large.obj-02b601cbabf3ae0b9e37d91342d334eb.mesh", "res://.godot/imported/tree-large.obj-02b601cbabf3ae0b9e37d91342d334eb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
