@@ -1,13 +1,43 @@
 [gd_scene format=3 uid="uid://csag8t0v6n0fq"]
 
 [ext_resource type="MeshLibrary" uid="uid://dc6yjuvj18trn" path="res://MeshLibrary.tres" id="1_dxppu"]
+[ext_resource type="Script" uid="uid://3itqdir41ryi" path="res://character_body_3d.gd" id="2_gy3sr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dxppu"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_dxppu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gy3sr"]
+
+[sub_resource type="Environment" id="Environment_dxppu"]
 
 [node name="World" type="Node3D" unique_id=1529860127]
 
 [node name="GridMap" type="GridMap" parent="." unique_id=45090640]
 mesh_library = ExtResource("1_dxppu")
-cell_size = Vector3(1, 1, 1)
+cell_size = Vector3(4, 4, 4)
+cell_center_y = false
+cell_scale = 4.0
 data = {
-"cells": PackedInt32Array(65535, 1, 37, 0, 1, 1441829, 65535, 2, 1048613, 0, 2, 655397, 1, 2, 655398, 65535, 3, 1048614, 0, 3, 655398, 65534, 2, 1048614, 65534, 1, 38, 65535, 0, 38, 0, 0, 1441830, 1, 1, 1441830)
+"cells": PackedInt32Array(65535, 1, 1441896, 0, 1, 1441896, 65535, 2, 1441896, 0, 2, 1441896, 1, 2, 1441896, 65535, 3, 1441896, 0, 3, 1441896, 65534, 2, 1441896, 65534, 1, 1441896, 65535, 0, 1441896, 0, 0, 1441896, 1, 1, 1441896, 1, 65535, 1441896, 0, 65535, 1441896, 65535, 65535, 1441896, 65534, 65535, 1441896, 65534, 0, 1441896, 1, 0, 1441896, 1, 3, 1441896, 65534, 3, 1441896, 0, 65534, 1441865, 65535, 65534, 1441865, 1, 65534, 1441865, 65533, 2, 1441868, 65533, 1, 1441865, 65533, 0, 1441865, 65533, 65535, 1441865, 65533, 65534, 1441865, 65533, 3, 1441865, 65533, 4, 1441865, 65534, 4, 1441865, 65535, 4, 1441865, 0, 4, 1441865, 1, 4, 1441865, 2, 4, 1441865, 2, 3, 1441865, 2, 2, 1441865, 2, 1, 1441865, 2, 0, 1441865, 2, 65535, 1441865, 2, 65534, 1441865, 65534, 65534, 1441865)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1862383381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5941353, 0)
+script = ExtResource("2_gy3sr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1156897185]
+shape = SubResource("CapsuleShape3D_dxppu")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1702884817]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.2588191, 0, -0.2588191, 0.9659258, 0, 4, 12)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=798687375]
+mesh = SubResource("CapsuleMesh_dxppu")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CharacterBody3D" unique_id=1381616143]
+sprite_frames = SubResource("SpriteFrames_gy3sr")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=28269664]
+environment = SubResource("Environment_dxppu")
